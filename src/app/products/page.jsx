@@ -12,7 +12,7 @@ export default function ProductsPage() {
         <h1 className="text-3xl font-bold">All Products</h1>
       </div>
 
-      <ProductList limit={40} />
+      <ProductList limit={60} />
     </main>
   );
 }

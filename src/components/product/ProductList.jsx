@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { Skeleton } from "../ui/skeleton";
 
-export default function ProductList({ limit = 40 }) {
+export default function ProductList({ limit = 60 }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
