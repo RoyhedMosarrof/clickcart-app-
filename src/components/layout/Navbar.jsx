@@ -151,10 +151,10 @@ export default function Navbar() {
           </Button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden border-t mt-4 pt-4 flex flex-col gap-4 px-2">
+          {/* Nav Links */}
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -169,6 +169,43 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+
+          {/* Divider */}
+          <div className="border-t pt-4 flex flex-col gap-3">
+            {/* Search */}
+            <form onSubmit={handleSearch} className="flex items-center gap-2">
+              <Input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="flex-1"
+              />
+              <Button type="submit" size="icon" variant="ghost">
+                <Search className="w-5 h-5" />
+              </Button>
+            </form>
+
+            {/* Wishlist */}
+            <Link
+              href="/wishlist"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Heart className="w-5 h-5" />
+              <span>Wishlist</span>
+            </Link>
+
+            {/* Account */}
+            <Link
+              href="/signin"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <User className="w-5 h-5" />
+              <span>Account</span>
+            </Link>
+          </div>
         </div>
       )}
     </nav>
