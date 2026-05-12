@@ -58,8 +58,16 @@ export default function Footer() {
 
         <Separator className="my-6" />
 
-        <div className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} ClickCart. All rights reserved.
+        <div className="flex flex-col items-center text-center text-sm text-muted-foreground gap-1">
+          <p>© {new Date().getFullYear()} ClickCart. All rights reserved.</p>
+
+          <p>
+            Designed and Developed by{" "}
+            <span className="font-medium hover:text-primary transition-colors cursor-pointer">
+              Royhed Mosarrof
+            </span>
+          </p>
+          <p>BSc in CSE • HSTU,Dinajpur,Bangladesh</p>
         </div>
       </div>
     </footer>
