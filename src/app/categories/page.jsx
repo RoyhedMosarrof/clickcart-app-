@@ -19,7 +19,8 @@ export default function CategoriesPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-10">
-      <ul className="max-w-6xl mx-auto px-6 py-10 space-y-4 text-lg font-medium">
+      <h1 className="text-3xl font-bold mb-6">Categories</h1>
+      <ul className="space-y-4 text-lg font-medium">
         {categories.map((category) => (
           <li
             key={category.slug}
