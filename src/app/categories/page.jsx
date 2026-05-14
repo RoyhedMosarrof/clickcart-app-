@@ -24,7 +24,7 @@ export default function CategoriesPage() {
         {categories.map((category) => (
           <li
             key={category.slug}
-            className="hover:text-primary cursor-pointer transition-colors"
+            className="hover:text-primary hover:font-semibold cursor-pointer transition-colors"
             onClick={() => router.push(`/categories/${category.slug}`)}
           >
             {category.name}
