@@ -13,7 +13,7 @@ export default function SignInPage() {
   const [password, setPassword] = useState("");
 
   return (
-    <main className="min-h-screen flex items-center justify-center px-4">
+    <main className="min-h-screen flex  items-center justify-center px-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center space-y-2">
           <div className="flex items-center justify-center gap-2 mb-2">
